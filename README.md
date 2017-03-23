@@ -2171,9 +2171,9 @@ tutorial and updated your .vimrc as suggested
 
 | Feature                                                  | Longhand                                          | Shorthand              |
 | -------------------------------------------------------- | ------------------------------------------------- | :--------------------: |
-| Run file with go run                                     | :GoRun                                            | &lt;Leader&rt;r        |
-| Build or compile tests                                   | :GoBuild, :GoTestCompile                          | &lt;Leader&rt;b        |
-| Run tests                                                | :GoTest                                           | &lt;Leader&rt;t        |
+| Run file with go run                                     | :GoRun                                            | \<Leader\>r            |
+| Build or compile tests                                   | :GoBuild, :GoTestCompile                          | &lt;Leader&gt;b        |
+| Run tests                                                | :GoTest                                           | `<Leader>`t            |
 | Run individual test                                      | :GoTestFunc                                       | None Given             |
 | Next error                                               | :cnext                                            | <C-n>                  |
 | Previous error                                           | :cprevious                                        | <C-m>                  |
