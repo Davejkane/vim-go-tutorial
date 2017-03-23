@@ -2171,14 +2171,14 @@ tutorial and updated your .vimrc as suggested
 
 | Feature                                                  | Longhand                                          | Shorthand              |
 | -------------------------------------------------------- | ------------------------------------------------- | :--------------------: |
-| Run file with go run                                     | :GoRun                                            | \<Leader\>r            |
-| Build or compile tests                                   | :GoBuild, :GoTestCompile                          | &lt;Leader&gt;b        |
+| Run file with go run                                     | :GoRun                                            | `<Leader>`r            |
+| Build or compile tests                                   | :GoBuild, :GoTestCompile                          | `<Leader>`b            |
 | Run tests                                                | :GoTest                                           | `<Leader>`t            |
 | Run individual test                                      | :GoTestFunc                                       | None Given             |
-| Next error                                               | :cnext                                            | <C-n>                  |
-| Previous error                                           | :cprevious                                        | <C-m>                  |
-| Close error window                                       | :cclose                                           | <Leader>a              |
-| Show test coverage                                       | :GoCoverage, :GoCoverageClear: GoCoverageToggle   | <Leader>c (toggle)     |
+| Next error                                               | :cnext                                            | `<C-n>`                |
+| Previous error                                           | :cprevious                                        | `<C-m>`                |
+| Close error window                                       | :cclose                                           | `<Leader>`a            |
+| Show test coverage                                       | :GoCoverage, :GoCoverageClear: GoCoverageToggle   | `<Leader>`c (toggle)   |
 | Show test coverage in browser                            | :GoCoverageBrowser                                | None Given             |
 | Format code                                              | :GoFmt                                            | enabled on save        |
 | Manage imports manually                                  | :GoImport, GoImportAs, GoDrop                     | None Given             |
@@ -2189,14 +2189,14 @@ tutorial and updated your .vimrc as suggested
 | Join split struct again                                  | n/a                                               | gJ                     |
 | Code quality checks                                      | :GoLint, :GoVet, :GoMetaLinter                    | enabled on save        |
 | Switch between file and test file                        | :GoAlternate                                      | :A, :AS, :AV, :AT      |
-| Go to definition                                         | :GoDef                                            | gd or <C-]>            |
-| Jump back to previous                                    | :GoDefPop                                         | <C-t>                  |
+| Go to definition                                         | :GoDef                                            | gd or `<C-]>`          |
+| Jump back to previous                                    | :GoDefPop                                         | `<C-t>`                |
 | Show and hide the go def stack                           | :GoDefStack, :GoDefStackClear                     | None given             |
 | Show all function and type declarations                  | :GoDecls, :GoDeclsDir                             | None given             |
 | Jump to next function                                    | n/a                                               | [[                     |
 | Jump to previous function                                | n/a                                               | ]]                     |
 | Go to documentation                                      | :GoDoc                                            | K                      |
-| Get type and parameter information                       | :GoInfo                                           | <Leader>i              |
+| Get type and parameter information                       | :GoInfo                                           | `<Leader>`i            |
 | Identifier highlighting                                  | :GoSameIds, :GoSameIdsClear                       | auto                   |
 | Show all files in a package (not including test files)   | :GoFiles                                          | None given             |
 | Show all dependencies of a package                       | :GoDeps                                           | None given             |
@@ -2208,7 +2208,7 @@ tutorial and updated your .vimrc as suggested
 ### Snippets
 
 | Description                    | Snippet    | Output                              |
-| ---                            | :---     : | ---                                 |
+| ------------------------------ | :--------: | ----------------------------------- |
 | Shorthand variable declaration | :          | ${1} := ${0}                        |
 | anonymous function             | anon       | ${1:fn} := func() {                 |
 |                                |            | ${0}                                |
