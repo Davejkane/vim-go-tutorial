@@ -2169,39 +2169,39 @@ tutorial and updated your .vimrc as suggested
 
 ### Go Commands
 
-| Feature                                                | Longhand                                        | Shorthand            |
-|--------------------------------------------------------|-------------------------------------------------|:--------------------:|
-| Run file with go run                                   | :GoRun                                          | <Leader>r            |
-| Build or compile tests                                 | :GoBuild, :GoTestCompile                        | <Leader>b            |
-| Run tests                                              | :GoTest                                         | <Leader>t            |
-| Run individual test                                    | :GoTestFunc                                     | None Given           |
-| Next error                                             | :cnext                                          | <C-n>                |
-| Previous error                                         | :cprevious                                      | <C-m>                |
-| Close error window                                     | :cclose                                         | <Leader>a            |
-| Show test coverage                                     | :GoCoverage, :GoCoverageClear: GoCoverageToggle | <Leader>c (toggle)   |
-| Show test coverage in browser                          | :GoCoverageBrowser                              | None Given           |
-| Format code                                            | :GoFmt                                          | enabled on save      |
-| Manage imports manually                                | :GoImport, GoImportAs, GoDrop                   | None Given           |
-| Manage imports automatically                           | :GoImports                                      | enabled on save      |
-| Jump to inner function                                 | n/a                                             | if                   |
-| Jump to outer function                                 | n/a                                             | af                   |
-| Split struct to multiple line                          | n/a                                             | gS                   |
-| Join split struct again                                | n/a                                             | gJ                   |
-| Code quality checks                                    | :GoLint, :GoVet, :GoMetaLinter                  | enabled on save      |
-| Switch between file and test file                      | :GoAlternate                                    | :A, :AS, :AV, :AT    |
-| Go to definition                                       | :GoDef                                          | gd or <C-]>          |
-| Jump back to previous                                  | :GoDefPop                                       | <C-t>                |
-| Show and hide the go def stack                         | :GoDefStack, :GoDefStackClear                   | None given           |
-| Show all function and type declarations                | :GoDecls, :GoDeclsDir                           | None given           |
-| Jump to next function                                  | n/a                                             | [[                   |
-| Jump to previous function                              | n/a                                             | ]]                   |
-| Go to documentation                                    | :GoDoc                                          | K                    |
-| Get type and parameter information                     | :GoInfo                                         | <Leader>i            |
-| Identifier highlighting                                | :GoSameIds, :GoSameIdsClear                     | auto                 |
-| Show all files in a package (not including test files) | :GoFiles                                        | None given           |
-| Show all dependencies of a package                     | :GoDeps                                         | None given           |
-| Rename identifier                                      | :GoRename                                       | None Given           |
-| Copy snippet and post to the go playground             | :GoPlay                                         | None Given           |
+| Feature                                                  | Longhand                                          | Shorthand              |
+| -------------------------------------------------------- | ------------------------------------------------- | :--------------------: |
+| Run file with go run                                     | :GoRun                                            | &lt;Leader&rt;r        |
+| Build or compile tests                                   | :GoBuild, :GoTestCompile                          | &lt;Leader&rt;b        |
+| Run tests                                                | :GoTest                                           | &lt;Leader&rt;t        |
+| Run individual test                                      | :GoTestFunc                                       | None Given             |
+| Next error                                               | :cnext                                            | <C-n>                  |
+| Previous error                                           | :cprevious                                        | <C-m>                  |
+| Close error window                                       | :cclose                                           | <Leader>a              |
+| Show test coverage                                       | :GoCoverage, :GoCoverageClear: GoCoverageToggle   | <Leader>c (toggle)     |
+| Show test coverage in browser                            | :GoCoverageBrowser                                | None Given             |
+| Format code                                              | :GoFmt                                            | enabled on save        |
+| Manage imports manually                                  | :GoImport, GoImportAs, GoDrop                     | None Given             |
+| Manage imports automatically                             | :GoImports                                        | enabled on save        |
+| Jump to inner function                                   | n/a                                               | if                     |
+| Jump to outer function                                   | n/a                                               | af                     |
+| Split struct to multiple line                            | n/a                                               | gS                     |
+| Join split struct again                                  | n/a                                               | gJ                     |
+| Code quality checks                                      | :GoLint, :GoVet, :GoMetaLinter                    | enabled on save        |
+| Switch between file and test file                        | :GoAlternate                                      | :A, :AS, :AV, :AT      |
+| Go to definition                                         | :GoDef                                            | gd or <C-]>            |
+| Jump back to previous                                    | :GoDefPop                                         | <C-t>                  |
+| Show and hide the go def stack                           | :GoDefStack, :GoDefStackClear                     | None given             |
+| Show all function and type declarations                  | :GoDecls, :GoDeclsDir                             | None given             |
+| Jump to next function                                    | n/a                                               | [[                     |
+| Jump to previous function                                | n/a                                               | ]]                     |
+| Go to documentation                                      | :GoDoc                                            | K                      |
+| Get type and parameter information                       | :GoInfo                                           | <Leader>i              |
+| Identifier highlighting                                  | :GoSameIds, :GoSameIdsClear                       | auto                   |
+| Show all files in a package (not including test files)   | :GoFiles                                          | None given             |
+| Show all dependencies of a package                       | :GoDeps                                           | None given             |
+| Rename identifier                                        | :GoRename                                         | None Given             |
+| Copy snippet and post to the go playground               | :GoPlay                                           | None Given             |
 
 ### Go Guru Commands
 
