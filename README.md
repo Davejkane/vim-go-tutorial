@@ -34,6 +34,7 @@ Tutorial for vim-go. A simple tutorial on how to install and use vim-go.
 14. [Generate it](#generate-it)
   * [Method stubs implementing an interface](#method-stubs-implementing-an-interface)
 15. [Share it](#share-it)
+16. [Cheatsheet](#cheatsheet)
 
 # Quick Setup
 
@@ -2159,6 +2160,62 @@ can manually set the browser via:
 ```
 let g:go_play_browser_command = "chrome"
 ```
+
+# Cheatsheet
+
+This cheatsheet shows the feature demonstrated in the tutorial, the long way
+to achieve the feature, and the shortcut if you have followed along with the
+tutorial and updated your .vimrc as suggested
+
+### Go Commands
+
+| Feature                                                | Longhand                                        | Shorthand            |
+| ------                                                 | ----------                                      | :-----------       : |
+| Run file with go run                                   | :GoRun                                          | <Leader>r            |
+| Build or compile tests                                 | :GoBuild, :GoTestCompile                        | <Leader>b            |
+| Run tests                                              | :GoTest                                         | <Leader>t            |
+| Run individual test                                    | :GoTestFunc                                     | None Given           |
+| Next error                                             | :cnext                                          | <C-n>                |
+| Previous error                                         | :cprevious                                      | <C-m>                |
+| Close error window                                     | :cclose                                         | <Leader>a            |
+| Show test coverage                                     | :GoCoverage, :GoCoverageClear: GoCoverageToggle | <Leader>c (toggle)   |
+| Show test coverage in browser                          | :GoCoverageBrowser                              | None Given           |
+| Format code                                            | :GoFmt                                          | enabled on save      |
+| Manage imports manually                                | :GoImport, GoImportAs, GoDrop                   | None Given           |
+| Manage imports automatically                           | :GoImports                                      | enabled on save      |
+| Jump to inner function                                 | n/a                                             | if                   |
+| Jump to outer function                                 | n/a                                             | af                   |
+| Split struct to multiple line                          | n/a                                             | gS                   |
+| Join split struct again                                | n/a                                             | gJ                   |
+| Code quality checks                                    | :GoLint, :GoVet, :GoMetaLinter                  | enabled on save      |
+| Switch between file and test file                      | :GoAlternate                                    | :A, :AS, :AV, :AT    |
+| Go to definition                                       | :GoDef                                          | gd or <C-]>          |
+| Jump back to previous                                  | :GoDefPop                                       | <C-t>                |
+| Show and hide the go def stack                         | :GoDefStack, :GoDefStackClear                   | None given           |
+| Show all function and type declarations                | :GoDecls, :GoDeclsDir                           | None given           |
+| Jump to next function                                  | n/a                                             | [[                   |
+| Jump to previous function                              | n/a                                             | ]]                   |
+| Go to documentation                                    | :GoDoc                                          | K                    |
+| Get type and parameter information                     | :GoInfo                                         | <Leader>i            |
+| Identifier highlighting                                | :GoSameIds, :GoSameIdsClear                     | auto                 |
+| Show all files in a package (not including test files) | :GoFiles                                        | None given           |
+| Show all dependencies of a package                     | :GoDeps                                         | None given           |
+| Rename identifier                                      | :GoRename                                       | None Given           |
+| Copy snippet and post to the go playground             | :GoPlay                                         | None Given           |
+
+### Go Guru Commands
+
+### Snippets
+
+| Description                    | Snippet    | Output                              |
+| ---                            | :---     : | ---                                 |
+| Shorthand variable declaration | :          | ${1} := ${0}                        |
+| anonymous function             | anon       | ${1:fn} := func() {                 |
+|                                |            | ${0}                                |
+|                                |            | }                                   |
+| Append to slice                | ap         | append(${1:slice}, ${0:value})      |
+| Append and assign              | ap=        | ${1:slice} = append($1, ${0:value}) |
+
 
 # Donation
 
