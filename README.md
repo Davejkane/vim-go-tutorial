@@ -2170,7 +2170,7 @@ tutorial and updated your .vimrc as suggested
 ### Go Commands
 
 | Feature                                                | Longhand                                        | Shorthand            |
-| ------                                                 | ----------                                      | :-----------       : |
+|--------------------------------------------------------|-------------------------------------------------|:--------------------:|
 | Run file with go run                                   | :GoRun                                          | <Leader>r            |
 | Build or compile tests                                 | :GoBuild, :GoTestCompile                        | <Leader>b            |
 | Run tests                                              | :GoTest                                         | <Leader>t            |
