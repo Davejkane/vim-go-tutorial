@@ -2210,36 +2210,36 @@ tutorial and updated your .vimrc as suggested
 | Description                    | Snippet    | Output                                                                                        |
 | ------------------------------ | :--------: | -----------------------------------                                                           |
 | Shorthand variable declaration | :          | `${1} := ${0}`                                                                                  |
-| anonymous function             | anon       | `${1:fn} := func() {`<br>&nbsp;&nbsp;&nbsp;&nbsp;`${0}`<br>`}`                                                                           |
+| anonymous function             | anon       | `${1:fn} := func() {`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`${0}`<br>`}`                                                                           |
 | Append to slice                | ap         | `append(${1:slice}, ${0:value})`                                                                |
 | Append and assign              | ap=        | `${1:slice} = append($1, ${0:value})`                                                           |
 | Break                          | br         | `break`                                                                                         |
 | Channel                        | ch         | `chan ${0:int}`                                                                                 |
-| Case                           | case       | `case ${1:value}:`<br>`${0:${VISUAL}}`                                                                              |
+| Case                           | case       | `case ${1:value}:`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`${0:${VISUAL}}`                                                                              |
 | Contant                        | con        | `const ${1:NAME} ${2:Type} = ${0:0}`                                                            |
-| Multiple Constants             | cons       | `(`<br>`${1:NAME} ${2:Type} = ${3:value}`<br>`${0}`<br>`)`                                                                                             |
-| Constants with iota            | iota       | `(`<br>`${1:NAME} ${2:Type} = iota`<br>`${0}`<br>`)`                                                                                             |
+| Multiple Constants             | cons       | `(`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`${1:NAME} ${2:Type} = ${3:value}`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`${0}`<br>`)`                                                                                             |
+| Constants with iota            | iota       | `(`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`${1:NAME} ${2:Type} = iota`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`${0}`<br>`)`                                                                                             |
 | Continue                       | cn         | `continue`                                                                                      |
-| Default case                   | default    | `default:`<br>`${0:${VISUAL}}`                                                                                      |
+| Default case                   | default    | `default:`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`${0:${VISUAL}}`                                                                                      |
 | Defer                          | df         | `defer ${1:func}(${2})`<br>`${0}`                                                                         |
-| Defer func                     | def        | `defer func() {`<br>`${0:${VISUAL}}`<br>`}()`                                                                                |
-| Defer recover                  | defr       | `defer func() {`<br>`if err := recover(); err != nil {`<br>`${0:${VISUAL}}`<br>`}`<br>`}()`                                                                                |
+| Defer func                     | def        | `defer func() {`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`${0:${VISUAL}}`<br>`}()`                                                                                |
+| Defer recover                  | defr       | `defer func() {`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`if err := recover(); err != nil {`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`${0:${VISUAL}}`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`}`<br>`}()`                                                                                |
 | General public license         | gpl        | `prints a general public license`                                                               |
-| Import                         | import     | `import (`<br>`"${1:package}"`<br>`)`                                                                                      |
-| Interface                      | interface  | `type ${1:Interface} interface {`<br>`${2:/* TODO: add methods */}`<br>`}`                                                               |
-| If block                       | if         | `if ${1:condition} {`<br>`${0:${VISUAL}}`<br>`}`                                                                           |
-| Else block                     | else       | `else {`<br>`${0:${VISUAL}}`<br>`}`                                                                                        |
-| Return error                   | errn       | `if err != nil {`<br>`return err`<br>`}`<br>`${0}`                                                                               |
-| Log Fatal error                | errl       | `if err != nil {`<br>`log.Fatal(err)`<br>`}`<br>`${0}`                                                                               |
-| Error panic                    | errp       | `if err != nil {`<br>`panic(${1})`<br>`}`<br>`${0}`                                                                               |
-| Error test                     | errt       | `if err != nil {`<br>`t.Fatal(err)`<br>`}`<br>`${0}`                                                                               |
-| Error handle                   | errh       | `if err != nil {`<br>`${1}`<br>`return`<br>`}`<br>`${0}`                                                                               |
+| Import                         | import     | `import (`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`"${1:package}"`<br>`)`                                                                                      |
+| Interface                      | interface  | `type ${1:Interface} interface {`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`${2:/* TODO: add methods */}`<br>`}`                                                               |
+| If block                       | if         | `if ${1:condition} {`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`${0:${VISUAL}}`<br>`}`                                                                           |
+| Else block                     | else       | `else {`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`${0:${VISUAL}}`<br>`}`                                                                                        |
+| Return error                   | errn       | `if err != nil {`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`return err`<br>`}`<br>`${0}`                                                                               |
+| Log Fatal error                | errl       | `if err != nil {`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`log.Fatal(err)`<br>`}`<br>`${0}`                                                                               |
+| Error panic                    | errp       | `if err != nil {`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`panic(${1})`<br>`}`<br>`${0}`                                                                               |
+| Error test                     | errt       | `if err != nil {`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`t.Fatal(err)`<br>`}`<br>`${0}`                                                                               |
+| Error handle                   | errh       | `if err != nil {`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`${1}`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`return`<br>`}`<br>`${0}`                                                                               |
 | Json field tag                 | json       | \`json:"${1:\`!v  go#util#snippetcase(matchstr(getline("."), '\w\+'))\`}"\`                     |
 | Yaml field tag                 | yaml       | \`yaml:"${1:\`!v  go#util#snippetcase(matchstr(getline("."), '\w\+'))\`}"\`                     |
 | Fallthrough                    | ft         | `fallthrough`                                                                                   |
-| For loop                       | for        | `for ${1} {`<br>`${0:${VISUAL}}`<br>`}`                                                                                    |
-| For integer loop               | fori       | `for ${1:i} := 0; $1 < ${2:N}; $1++ {`<br>`${0:${VISUAL}}`<br>`}`                                                          |
-| For range loop                 | forr       | `for ${2:k}, ${3:v} := range ${1} {`<br>`${0:${VISUAL}}`<br>`}`                                                            |
+| For loop                       | for        | `for ${1} {`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`${0:${VISUAL}}`<br>`}`                                                                                    |
+| For integer loop               | fori       | `for ${1:i} := 0; $1 < ${2:N}; $1++ {`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`${0:${VISUAL}}`<br>`}`                                                          |
+| For range loop                 | forr       | `for ${2:k}, ${3:v} := range ${1} {`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`${0:${VISUAL}}`<br>`}`                                                            |
 | Function                       | func       | func ${1:name}(${2:params})${3/(.+)/ /}`!p opening_par(snip, 3)`$3`!p closing_par(snip, 3)` { |
 |                                |            | ${0:${VISUAL}}                                                                                |
 |                                |            | }                                                                                             |
