@@ -2207,83 +2207,158 @@ tutorial and updated your .vimrc as suggested
 
 ### Snippets
 
-| Description                    | Snippet    | Output                                                                    |
-| ------------------------------ | :--------: | -----------------------------------                                       |
-| Shorthand variable declaration | :          | ${1} := ${0}                                                              |
-| anonymous function             | anon       | ${1:fn} := func() {                                                       |
-|                                |            | ${0}                                                                      |
-|                                |            | }                                                                         |
-| Append to slice                | ap         | append(${1:slice}, ${0:value})                                            |
-| Append and assign              | ap=        | ${1:slice} = append($1, ${0:value})                                       |
-| Break                          | br         | break                                                                     |
-| Channel                        | ch         | chan ${0:int}                                                             |
-| Case                           | case       | case ${1:value}:                                                          |
-|                                |            | ${0:${VISUAL}}                                                            |
-| Contant                        | con        | const ${1:NAME} ${2:Type} = ${0:0}                                        |
-| Multiple Constants             | cons       | (                                                                         |
-|                                |            | ${1:NAME} ${2:Type} = ${3:value}                                          |
-|                                |            | ${0}                                                                      |
-|                                |            | )                                                                         |
-| Constants with iota            | iota       | (                                                                         |
-|                                |            | ${1:NAME} ${2:Type} = iota                                                |
-|                                |            | ${0}                                                                      |
-|                                |            | )                                                                         |
-| Continue                       | cn         | continue                                                                  |
-| Default case                   | default    | default:                                                                  |
-|                                |            | ${0:${VISUAL}}                                                            |
-| Defer                          | df         | defer ${1:func}(${2})                                                     |
-|                                |            | ${0}                                                                      |
-| Defer func                     | def        | defer func() {                                                            |
-|                                |            | ${0:${VISUAL}}                                                            |
-|                                |            | }()                                                                       |
-| Defer recover                  | defr       | defer func() {                                                            |
-|                                |            | if err := recover(); err != nil {                                         |
-|                                |            | ${0:${VISUAL}}                                                            |
-|                                |            | }                                                                         |
-|                                |            | }()                                                                       |
-| General public license         | gpl        | prints a general public license                                           |
-| Import                         | import     | import (                                                                  |
-|                                |            | "${1:package}"                                                            |
-|                                |            | )                                                                         |
-| Interface                      | interface  | type ${1:Interface} interface {                                           |
-|                                |            | ${2:/* TODO: add methods */}                                              |
-|                                |            | }                                                                         |
-| If block                       | if         | if ${1:condition} {                                                       |
-|                                |            | ${0:${VISUAL}}                                                            |
-|                                |            | }                                                                         |
-| Else block                     | else       | else {                                                                    |
-|                                |            | ${0:${VISUAL}}                                                            |
-|                                |            | }                                                                         |
-| Return error                   | errn       | if err != nil {                                                           |
-|                                |            | return err                                                                |
-|                                |            | }                                                                         |
-|                                |            | ${0}                                                                      |
-| Log Fatal error                | errl       | if err != nil {                                                           |
-|                                |            | log.Fatal(err)                                                            |
-|                                |            | }                                                                         |
-|                                |            | ${0}                                                                      |
-| Error panic                    | errp       | if err != nil {                                                           |
-|                                |            | panic(${1})                                                               |
-|                                |            | }                                                                         |
-|                                |            | ${0}                                                                      |
-| Error test                     | errt       | if err != nil {                                                           |
-|                                |            | t.Fatal(err)                                                              |
-|                                |            | }                                                                         |
-|                                |            | ${0}                                                                      |
-| Error handle                   | errh       | if err != nil {                                                           |
-|                                |            | ${1}                                                                      |
-|                                |            | return                                                                    |
-|                                |            | }                                                                         |
-|                                |            | ${0}                                                                      |
-| Json field tag                 | json       | \`json:"${1:`!v  go#util#snippetcase(matchstr(getline("."), '\w\+'))`}"\` |
-| Yaml field tag                 | yaml       | \`yaml:"${1:`!v  go#util#snippetcase(matchstr(getline("."), '\w\+'))`}"\` |
-| Fallthrough                    | ft         | fallthrough                                                               |
-| For loop                       | for        | for ${1} {                                                                |
-|                                |            | ${0:${VISUAL}}                                                            |
-|                                |            | }                                                                         |
-| For integer loop               | fori       | for ${1:i} := 0; $1 < ${2:N}; $1++ {                                      |
-|                                |            | ${0:${VISUAL}}                                                            |
-|                                |            | }                                                                         |
+| Description                    | Snippet    | Output                                                                                        |
+| ------------------------------ | :--------: | -----------------------------------                                                           |
+| Shorthand variable declaration | :          | ${1} := ${0}                                                                                  |
+| anonymous function             | anon       | ${1:fn} := func() {                                                                           |
+|                                |            | ${0}                                                                                          |
+|                                |            | }                                                                                             |
+| Append to slice                | ap         | append(${1:slice}, ${0:value})                                                                |
+| Append and assign              | ap=        | ${1:slice} = append($1, ${0:value})                                                           |
+| Break                          | br         | break                                                                                         |
+| Channel                        | ch         | chan ${0:int}                                                                                 |
+| Case                           | case       | case ${1:value}:                                                                              |
+|                                |            | ${0:${VISUAL}}                                                                                |
+| Contant                        | con        | const ${1:NAME} ${2:Type} = ${0:0}                                                            |
+| Multiple Constants             | cons       | (                                                                                             |
+|                                |            | ${1:NAME} ${2:Type} = ${3:value}                                                              |
+|                                |            | ${0}                                                                                          |
+|                                |            | )                                                                                             |
+| Constants with iota            | iota       | (                                                                                             |
+|                                |            | ${1:NAME} ${2:Type} = iota                                                                    |
+|                                |            | ${0}                                                                                          |
+|                                |            | )                                                                                             |
+| Continue                       | cn         | continue                                                                                      |
+| Default case                   | default    | default:                                                                                      |
+|                                |            | ${0:${VISUAL}}                                                                                |
+| Defer                          | df         | defer ${1:func}(${2})                                                                         |
+|                                |            | ${0}                                                                                          |
+| Defer func                     | def        | defer func() {                                                                                |
+|                                |            | ${0:${VISUAL}}                                                                                |
+|                                |            | }()                                                                                           |
+| Defer recover                  | defr       | defer func() {                                                                                |
+|                                |            | if err := recover(); err != nil {                                                             |
+|                                |            | ${0:${VISUAL}}                                                                                |
+|                                |            | }                                                                                             |
+|                                |            | }()                                                                                           |
+| General public license         | gpl        | prints a general public license                                                               |
+| Import                         | import     | import (                                                                                      |
+|                                |            | "${1:package}"                                                                                |
+|                                |            | )                                                                                             |
+| Interface                      | interface  | type ${1:Interface} interface {                                                               |
+|                                |            | ${2:/* TODO: add methods */}                                                                  |
+|                                |            | }                                                                                             |
+| If block                       | if         | if ${1:condition} {                                                                           |
+|                                |            | ${0:${VISUAL}}                                                                                |
+|                                |            | }                                                                                             |
+| Else block                     | else       | else {                                                                                        |
+|                                |            | ${0:${VISUAL}}                                                                                |
+|                                |            | }                                                                                             |
+| Return error                   | errn       | if err != nil {                                                                               |
+|                                |            | return err                                                                                    |
+|                                |            | }                                                                                             |
+|                                |            | ${0}                                                                                          |
+| Log Fatal error                | errl       | if err != nil {                                                                               |
+|                                |            | log.Fatal(err)                                                                                |
+|                                |            | }                                                                                             |
+|                                |            | ${0}                                                                                          |
+| Error panic                    | errp       | if err != nil {                                                                               |
+|                                |            | panic(${1})                                                                                   |
+|                                |            | }                                                                                             |
+|                                |            | ${0}                                                                                          |
+| Error test                     | errt       | if err != nil {                                                                               |
+|                                |            | t.Fatal(err)                                                                                  |
+|                                |            | }                                                                                             |
+|                                |            | ${0}                                                                                          |
+| Error handle                   | errh       | if err != nil {                                                                               |
+|                                |            | ${1}                                                                                          |
+|                                |            | return                                                                                        |
+|                                |            | }                                                                                             |
+|                                |            | ${0}                                                                                          |
+| Json field tag                 | json       | \`json:"${1:`!v  go#util#snippetcase(matchstr(getline("."), '\w\+'))`}"\`                     |
+| Yaml field tag                 | yaml       | \`yaml:"${1:`!v  go#util#snippetcase(matchstr(getline("."), '\w\+'))`}"\`                     |
+| Fallthrough                    | ft         | fallthrough                                                                                   |
+| For loop                       | for        | for ${1} {                                                                                    |
+|                                |            | ${0:${VISUAL}}                                                                                |
+|                                |            | }                                                                                             |
+| For integer loop               | fori       | for ${1:i} := 0; $1 < ${2:N}; $1++ {                                                          |
+|                                |            | ${0:${VISUAL}}                                                                                |
+|                                |            | }                                                                                             |
+| For range loop                 | forr       | for ${2:k}, ${3:v} := range ${1} {                                                            |
+|                                |            | ${0:${VISUAL}}                                                                                |
+|                                |            | }                                                                                             |
+| Function                       | func       | func ${1:name}(${2:params})${3/(.+)/ /}`!p opening_par(snip, 3)`$3`!p closing_par(snip, 3)` { |
+|                                |            | ${0:${VISUAL}}                                                                                |
+|                                |            | }                                                                                             |
+| fmt.Printf                     | ff         | fmt.Printf("${1:${VISUAL}} = %+v\n", $1)                                                      |
+| fmt.Println                    | fn         | fmt.Println("${1:${VISUAL}}")                                                                 |
+| log.Printf                     | lf         | log.Printf("${1:${VISUAL}} = %+v\n", $1)                                                      |
+| log.Println                    | ln         | log.Println("${1:${VISUAL}}")                                                                 |
+| Make                           | make       | make(${1:[]string}, ${2:0})${0}                                                               |
+| Map                            | map        | map[${1:string}]${0:int}                                                                      |
+| Main function                  | main       | func main() {                                                                                 |
+|                                |            | ${0:${VISUAL}}                                                                                |
+|                                |            | }                                                                                             |
+| Create Method                  | meth       | too long : makes a method                                                                     |
+| If OK                          | ok         | if !ok {                                                                                      |
+|                                |            | ${0:${VISUAL}}                                                                                |
+|                                |            | }                                                                                             |
+| Declare package                | package    | package ${1:main}                                                                             |
+|                                |            | ${0}                                                                                          |
+| Panic                          | pn         | panic("${0:msg}")                                                                             |
+| Return                         | rt         | return ${0:${VISUAL}}                                                                         |
+| Select                         | select     | select {                                                                                      |
+|                                |            | case ${1:v1} := <-${2:chan1}                                                                  |
+|                                |            | ${0}                                                                                          |
+|                                |            | }                                                                                             |
+| Struct                         | st         | type ${1:Type} struct {                                                                       |
+|                                |            | ${0}                                                                                          |
+|                                |            | }                                                                                             |
+| Switch                         | switch     | switch ${1:var} {                                                                             |
+|                                |            | case ${2:value1}:                                                                             |
+|                                |            | ${0}                                                                                          |
+|                                |            | }                                                                                             |
+| Sprintf                        | sp         | fmt.Sprintf("%${1:s}", ${2:var})                                                              |
+| Goroutine                      | go         | go ${1:funcName}(${0})                                                                        |
+| Anonymous Goroutine            | gof        | go func() {                                                                                   |
+|                                |            | ${1:${VISUAL}}                                                                                |
+|                                |            | }()                                                                                           |
+| Test Function                  | test       | func Test${1:Function}(t \*testing.T) {                                                       |
+|                                |            | ${0:${VISUAL}}                                                                                |
+|                                |            | }                                                                                             |
+| http.HandlerFunc               | hf         | func ${1:handler}(w http.ResponseWriter, r \*http.Request) {                                  |
+|                                |            | ${0:fmt.Fprintf(w, "hello world")}                                                            |
+|                                |            | }                                                                                             |
+| mux.HandleFunc                 | hhf        | ${1:http}.HandleFunc("${2:/}", func(w http.ResponseWriter, r \*http.Request) {                |
+|                                |            | ${0:fmt.Fprintf(w, "hello world")}                                                            |
+|                                |            | })                                                                                            |
+| Quick Test Server              | tsrv       | ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r \*http.Request) {     |
+|                                |            | fmt.Fprintln(w, ${1:`response`})                                                              |
+|                                |            | }))                                                                                           |
+|                                |            | defer ts.Close()                                                                              |
+|                                |            | ${0:someUrl} = ts.URL                                                                         |
+| Test error handling            | ter        | if err != nil {                                                                               |
+|                                |            | t.Errorf("${0:message}")                                                                      |
+|                                |            | }                                                                                             |
+| Example Function               | example    | func Example${1:Method}() {                                                                   |
+|                                |            | ${0:${VISUAL}}                                                                                |
+|                                |            | // output:                                                                                    |
+|                                |            | }                                                                                             |
+| Benchmark                      | benchmark  | func Benchmark${1:Method}(b \*testing.B) {                                                    |
+|                                |            | for i := 0; i < b.N; i++ {                                                                    |
+|                                |            | ${0:${VISUAL}}                                                                                |
+|                                |            | }                                                                                             |
+|                                |            | }                                                                                             |
+| Variable Declaration           | var        | var ${1:x} ${2:Type}${3: = ${0:value}}                                                        |
+| Variables Declarations         | vars       | var (                                                                                         |
+|                                |            | ${1:x} ${2:Type}${3: = ${0:value}}                                                            |
+|                                |            | )                                                                                             |
+| DeepEquals                     | eq         | if !reflect.DeepEqual(${1:expected}, ${2:actual}) {                                           |
+|                                |            | \_, file, line, _ := runtime.Caller(0)                                                        |
+|                                |            | fmt.Printf("%s:%d:\n\n\texp: %#v\n\n\tgot: %#v\n\n", filepath.Base(file), line, $1, $2)       |
+|                                |            | t.FailNow()                                                                                   |
+|                                |            | }                                                                                             |
+
 
 # Donation
 
