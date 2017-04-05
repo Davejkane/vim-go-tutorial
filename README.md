@@ -2210,7 +2210,7 @@ tutorial and updated your .vimrc as suggested
 | Description                    | Snippet    | Output                                                                                        |
 | ------------------------------ | :--------: | -----------------------------------                                                           |
 | Shorthand variable declaration | :          | ${1} := ${0}                                                                                  |
-| anonymous function             | anon       | ${1:fn} := func() {<br>		${0}<br>}                                                                           |
+| anonymous function             | anon       | ${1:fn} := func() {<br>	    ${0}<br>}                                                                           |
 |                                |            |                                                                                           |
 |                                |            | }                                                                                             |
 | Append to slice                | ap         | append(${1:slice}, ${0:value})                                                                |
